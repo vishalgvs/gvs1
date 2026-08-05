@@ -14,7 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reportValidity();
       return;
     }
+    // Phone number validation
+    const phone = form.querySelector('#phone').value.trim();
+    const phonePattern = /^(?:\+91[\s-]?)?[6-9]\d{9}$/;
 
+    if (!phonePattern.test(phone.replace(/\s/g, ''))) {
+      alert('Please enter a valid Indian mobile number.');
+      form.querySelector('#phone').focus();
+      return;
+    }
+
+    // Email validation
+    const email = form.querySelector('#email').value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      form.querySelector('#email').focus();
+      return;
+    }
     errorBox.classList.remove('show');
     successBox.classList.remove('show');
 
