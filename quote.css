@@ -51,6 +51,32 @@ textarea{min-height:145px;resize:vertical}
 .submit:hover{background:var(--amber-deep)}
 .note{font-size:.8rem;color:var(--chrome)}
 
+.form-success{
+  display:none;
+  background:linear-gradient(145deg,var(--green-deep),#2E4620);
+  color:#ECEAE4;
+  border-radius:12px;
+  padding:1.3rem 1.5rem;
+  margin-top:1.4rem;
+  margin-bottom:1.6rem;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 16px 34px -20px rgba(63,92,40,.65);
+}
+.form-success.show{display:grid;gap:.55rem;animation:fadeSlide .35s ease}
+.fs-top{display:flex;align-items:center;gap:.65rem}
+.fs-icon{
+  display:flex;align-items:center;justify-content:center;
+  width:24px;height:24px;flex:none;
+  border-radius:50%;background:var(--amber);color:#1a1a1a;
+  font-size:.8rem;font-weight:900;line-height:1;
+}
+.form-success strong{font-family:var(--disp);text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em}
+.fs-msg{color:#D3D8CB;font-size:.92rem;line-height:1.55;padding-left:calc(24px + .65rem)}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.submit:disabled{opacity:.6;cursor:not-allowed}
+.form-error{display:none;color:#B23A2E;font-family:var(--mono);font-size:.8rem;margin-top:.7rem}
+.form-error.show{display:block}
+
 .side{display:grid;gap:1rem}
 .info{background:linear-gradient(145deg,var(--green-deep),#2E4620);color:#ECEAE4;border-radius:14px;padding:1.6rem}
 .info h3{font-family:var(--disp);text-transform:uppercase;font-size:1.25rem;margin-bottom:.8rem}
